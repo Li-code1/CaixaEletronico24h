@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixa Eletrônico 24h</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🏧 Caixa Eletrônico 24h</h1>
+  </header>
+
+  <main>
+    <section id="saldo" aria-live="polite">
+      <!-- Saldo será exibido aqui -->
+    </section>
+
+    <form id="atmForm" aria-label="Formulário de Saque">
+      <label for="valor">Informe o valor para saque (R$):</label>
+      <input type="number" id="valor" name="valor" step="10" min="10" required aria-required="true">
+      <button type="submit">Sacar</button>
+    </form>
+
+    <form id="depositForm" aria-label="Formulário de Depósito">
+      <label for="deposito">Informe o valor para depósito (R$):</label>
+      <input type="number" id="deposito" name="deposito" step="10" min="10" required aria-required="true">
+      <button type="submit">Depositar</button>
+    </form>
+
+    <section id="resultado" aria-live="polite">
+      <!-- Resultado aparecerá aqui -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Caixa Eletrônico 24h</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
