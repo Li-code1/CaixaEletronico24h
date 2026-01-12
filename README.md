@@ -1,88 +1,66 @@
+# 🏧 Caixa Eletrônico 24h - Simulador de Operações Bancárias
 
-```markdown
-# 🏧 Caixa Eletrônico 24h
-
-Este projeto é uma aplicação web que simula um **Caixa Eletrônico 24h**, permitindo ao usuário realizar **saques** e **depósitos**, sempre verificando o saldo disponível e atualizando-o em tempo real.
+Este projeto é uma aplicação web que simula o funcionamento de um **Caixa Eletrônico (ATM)**. Desenvolvido com foco em **Programação Orientada a Objetos (POO)** e **Experiência do Usuário (UX)**, ele permite realizar operações de saque e depósito com validação de saldo em tempo real e lógica de distribuição de cédulas.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-- **index.html** → Interface da aplicação (HTML semântico e acessível).
-- **styles.css** → Estilos básicos em vermelho e responsivos.
-- **scripts.js** → Lógica da aplicação utilizando Programação Orientada a Objetos (POO).
+* **index.html** → Interface construída com HTML5 semântico, focada em acessibilidade.
+* **styles.css** → Design responsivo e moderno, utilizando a identidade visual do ecossistema de pagamentos.
+* **scripts.js** → Core do sistema, implementado com JavaScript Vanilla e princípios avançados de POO.
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades e Regras de Negócio
 
-- Exibir o **saldo atual** da conta.
-- Permitir **saques**:
-  - Verifica se há saldo suficiente.
-  - Entrega notas disponíveis (R$100, R$50, R$20, R$10).
-  - Exibe mensagem de erro caso não seja possível realizar o saque.
-- Permitir **depósitos**:
-  - Atualiza o saldo imediatamente.
-  - Exibe mensagem de confirmação.
-- Interface **responsiva** e **acessível**, com uso de `aria-live` para leitores de tela.
+* **Gestão de Saldo:** Exibição dinâmica e atualização imediata após cada transação.
+* **Lógica de Saque Inteligente:**
+* Validação de saldo suficiente antes da operação.
+* Algoritmo para entrega das notas disponíveis: **R50, R10**.
+* Sistema de mensagens de erro para valores não suportados pelas notas disponíveis.
 
----
 
-## 🧩 Conceitos de POO aplicados
-
-- **Foco em objetos**: O código é organizado em torno das classes `Conta` e `ContaCaixaEletronico`.
-- **Herança**: `ContaCaixaEletronico` herda de `Conta`.
-- **Encapsulamento**: O saldo é protegido (`_saldo`) e acessado via getter.
-- **Polimorfismo**: Métodos `sacar` e `depositar` podem ser tratados de forma genérica em diferentes tipos de conta.
+* **Depósito Instantâneo:** Atualização do montante em conta com feedback visual de confirmação.
+* **Acessibilidade (A11y):** Uso de atributos `aria-live` para garantir que leitores de tela anunciem as mudanças de saldo e alertas para usuários com deficiência visual.
 
 ---
 
-## 🚀 Como executar
+## 🛠️ Destaques Técnicos & Clean Code
 
-1. Clone este repositório ou baixe os arquivos.
-2. Abra o arquivo `index.html` em qualquer navegador moderno.
-3. O saldo inicial é de **R$500,00**.
-4. Informe um valor para saque ou depósito e clique no botão correspondente.
-5. O resultado aparecerá na tela e o saldo será atualizado.
-
----
-
-## 📸 Exemplo de uso
-
-- **Saldo inicial**: R$500,00  
-
-### Saque
-- Entrada: `R$ 130`  
-- Saída:  
-  ```
-  💵 Notas entregues:
-  1 x R$100
-  1 x R$20
-  1 x R$10
-  ```
-- Saldo atualizado: R$370,00  
-
-### Depósito
-- Entrada: `R$ 200`  
-- Saída:  
-  ```
-  ✅ Depósito de R$200,00 realizado.
-  ```
-- Saldo atualizado: R$570,00  
+* **Encapsulamento:** O saldo da conta é protegido (`_saldo`), impedindo manipulações externas diretas e garantindo que toda alteração passe pelos métodos de validação.
+* **Herança e Extensibilidade:** A classe `ContaCaixaEletronico` herda de `Conta`, permitindo que o sistema seja facilmente expandido para outros tipos de contas (ex: Poupança ou Corrente) com regras diferentes.
+* **Polimorfismo:** Métodos de transação preparados para comportamentos específicos, mantendo uma interface genérica e limpa.
+* **Tratamento de Exceções:** Lógica implementada para lidar com entradas inválidas, como valores negativos ou caracteres não numéricos.
 
 ---
 
-## 🎨 Tecnologias utilizadas
+## 📸 Exemplo de Fluxo
 
-- **HTML5** (semântico e acessível)
-- **CSS3** (tema vermelho e responsividade)
-- **JavaScript (ES6+)** com Programação Orientada a Objetos
+### Operação de Saque
+
+* **Saldo Inicial:** R$ 500,00
+* **Entrada de Saque:** R$ 130,00
+* **Processamento:** 1x R20, 1x R$10.
+* **Resultado:** Saldo atualizado para **R$ 370,00**.
+
+### Operação de Depósito
+
+* **Entrada:** R$ 200,00
+* **Resultado:** Mensagem de sucesso e saldo atualizado para **R$ 570,00**.
 
 ---
 
-## 📖 Licença
+## 🚀 Como Executar
 
-Este projeto é de uso livre para fins educacionais e pode ser adaptado conforme necessário.
-```
+1. Clone este repositório: `git clone https://github.com/Li-code1/CaixaEletronico24h.git`
+2. Abra o arquivo `index.html` em seu navegador.
+3. Utilize o saldo inicial de **R$ 500,00** para testar as validações de saque e depósito.
+
+---
+
+### 💡 Por que este projeto é relevante para o PagBank?
+
+Este projeto demonstra minha capacidade de traduzir regras de negócio do setor financeiro em código funcional, seguro e acessível, respeitando princípios fundamentais da engenharia de software que garantem a escalabilidade de grandes plataformas de pagamento.
 
 ---
