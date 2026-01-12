@@ -59,8 +59,3 @@ Este projeto é uma aplicação web que simula o funcionamento de um **Caixa Ele
 
 ---
 
-### 💡 Por que este projeto é relevante para o PagBank?
-
-Este projeto demonstra minha capacidade de traduzir regras de negócio do setor financeiro em código funcional, seguro e acessível, respeitando princípios fundamentais da engenharia de software que garantem a escalabilidade de grandes plataformas de pagamento.
-
----
